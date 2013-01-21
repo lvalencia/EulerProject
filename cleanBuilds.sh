@@ -1,5 +1,5 @@
 #!/bin/bash
-binaries=`find . -perm +0111 -maxdepth 1 -type f | grep -v '\.sh$' | grep -v '\.plx' | grep -v '\.php' | awk -F'./' '{print $NF}'`
+binaries=`find . -perm +0111 -maxdepth 1 -type f | grep -v '\.sh$' | grep -v '\.plx$' | grep -v '\.php$' | awk -F'./' '{print $NF}'`
 for bin in $binaries
 do
 	rm $bin
